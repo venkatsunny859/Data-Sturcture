@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int regNos[] = {101, 102, 103, 104, 105};
+    int n = sizeof(regNos) / sizeof(regNos[0]);
+    int searchRegNo, found = 0;
+
+    printf("Enter the registration number to search: ");
+    scanf("%d", &searchRegNo);
+
+    for (int i = 0; i < n; i++) {
+        if (regNos[i] == searchRegNo) {
+            found = 1;
+            break;
+        }
+    }
+
+    if (found) {
+        printf("Registration number %d found.\n", searchRegNo);
+    } else {
+        printf("Registration number %d not found.\n", searchRegNo);
+    }
+
+    return 0;
+}
